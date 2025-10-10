@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="apple.ico">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <title>Apple</title>
+
+    <style>
+        @font-face {
+            font-family: 'apple-bold';
+            src: url('/sf-pro-display_bold.woff2') format('woff2');
+        }
+
+        @font-face {
+            font-family: 'apple-regular';
+            src: url('/sf-pro-display_regular.woff2') format('woff2');
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            width: 100%;
+            font-family: 'apple-regular', sans-serif;
+            background: #fff;
+            overflow-x: hidden;
+        }
+
+        /* Navbar */
+        .nav-meun {
+            height: 50px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            background: rgba(35, 35, 35, 0.9);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .nav a {
+            color: #fff;
+            font-size: 0.95rem;
+            text-decoration: none;
+            margin-left: 20px;
+            transition: opacity 0.3s;
+        }
+
+        .nav a:hover {
+            opacity: 0.7;
+        }
+
+        /* Common Hero Style */
+        .container {
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding-top: 80px;
+            /* spacing below navbar */
+            margin-bottom: 10px;
+        }
+
+        .box {
+            height: 600px;
+            color: #000;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            text-align: center;
+            padding-top: 80px;
+
+
+            h1 {
+                font-family: 'apple-bold';
+                font-size: 3.5rem;
+                font-weight: 800;
+                margin-bottom: 10px;
+            }
+
+            h5 {
+                font-size: 1.3rem;
+                font-weight: 400;
+                line-height: 1.4;
+            }
+
+        }
+
+
+        /* Hero Backgrounds */
+        .box-one {
+            background: url('https://www.apple.com/v/home/ch/images/heroes/iphone-17-pro/hero_iphone_17_pro__bknyzxfk2agi_large_2x.jpg') no-repeat center center / cover;
+            color: #fff;
+        }
+
+        .box-two {
+            background: url('  https://www.apple.com/v/home/ch/images/heroes/iphone-air/hero_iphone_air__0gxyavihpiqu_largetall.jpg') no-repeat center center / cover;
+        }
+
+        .box-three {
+            background: url('https://www.apple.com/v/home/ch/images/heroes/iphone-17/hero_iphone_17__c5vvimu9a20y_largetall.jpg') no-repeat center center / cover;
+            height: 650px;
+            padding: 60px;
+        }
+
+        /* Side-by-side promos */
+        .box-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .box-min {
+            flex: 1;
+            min-width: 48%;
+            height: 600px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            padding-top: 60px;
+            align-items: center;
+            color: #000;
+            text-align: center;
+
+
+            h1 {
+                font-family: 'apple-bold';
+                font-size: 2.8rem;
+                font-weight: 800;
+                margin-bottom: 10px;
+            }
+
+            h5 {
+                font-size: 1rem;
+                font-weight: 400;
+                line-height: 1.2;
+            }
+        }
+
+        .box-four {
+            background: url('https://www.apple.com/v/home/ch/images/promos/apple-watch-series-11/promo_apple_watch_series_11__b63hxviqvonm_large_2x.jpg') no-repeat center center / cover;
+        }
+
+        .box-five {
+            background: url('https://www.apple.com/v/home/ch/images/promos/airpods-pro-3/promo_airpodspro_3__f6xmza7bglei_large_2x.jpg') no-repeat center center / cover;
+        }
+
+
+        .box-six {
+            background: url('https://www.apple.com/v/home/ch/images/promos/macbook-air/promo_macbook_air__fqowrtnxewqe_large_2x.jpg') no-repeat center center / cover;
+        }
+
+        .box-seven {
+            background: url('https://www.apple.com/v/home/ch/images/promos/ipad-air/promo_ipad_air_avail__6i02t7nujr62_large_2x.jpg') no-repeat center center / cover;
+        }
+
+
+        .box-eight {
+            background: url('https://www.apple.com/v/home/ch/images/promos/iphone-tradein/promo_iphone_tradein__bugw15ka691e_large_2x.jpg') no-repeat center center / cover;
+        }
+
+        .box-nine {
+            background: url('https://www.apple.com/v/home/ch/images/promos/apple-card/promo_apple_card__5cm7draujpey_large_2x.jpg') no-repeat center center / cover;
+        }
+
+        /* Buttons */
+        .link {
+            margin-top: 20px;
+            display: flex;
+            gap: 20px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .link-btn-one {
+            background: #0077ed;
+            color: #fff;
+            border: none;
+        }
+
+        .link-btn-two {
+            background: transparent;
+            color: #0077ed;
+            border: 2px solid #0077ed;
+        }
+
+        .link-btn-two:hover {
+            background: #0077ed;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="nav-meun">
+            <div class="nav">
+                <a href="#"><i class="ri-apple-fill"></i></a>
+                <a href="#">Store</a>
+                <a href="#">Mac</a>
+                <a href="#">iPad</a>
+                <a href="#">iPhone</a>
+                <a href="#">Watch</a>
+                <a href="#">Vision</a>
+                <a href="#">AirPods</a>
+                <a href="#">TV & Home</a>
+                <a href="#">Entertainment</a>
+                <a href="#">Accessories</a>
+                <a href="#">Support</a>
+                <a href="#"><i class="ri-search-line"></i></a>
+                <a href="#"><i class="ri-shopping-bag-line"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main -->
+    <main>
+        <div class="container box box-one">
+            <h1>iPhone 17 Pro</h1>
+            <h5>All out Pro</h5>
+            <div class="link">
+                <button class="btn link-btn-one">Learn more</button>
+                <button class="btn link-btn-two">Buy</button>
+            </div>
+        </div>
+
+        <div class="container box box-two">
+            <h1>iPhone 17 Air</h1>
+            <h5>The thinnest iPhone ever.<br>With the power of Pro inside.</h5>
+            <div class="link">
+                <button class="btn link-btn-one">Learn more</button>
+                <button class="btn link-btn-two">Buy</button>
+            </div>
+        </div>
+
+        <div class="container box box-three">
+            <h1>iPhone 17</h1>
+            <h5>Magichromatic.</h5>
+            <div class="link">
+                <button class="btn link-btn-one">Learn more</button>
+                <button class="btn link-btn-two">Buy</button>
+            </div>
+        </div>
+
+        <!-- Side promos -->
+        <div class="box-row">
+            <div class="box-min box-four">
+                <h1>Apple Watch Series 11</h1>
+                <h5>Smarter. Brighter. Stronger.</h5>
+                <div class="link">
+                    <button class="btn link-btn-one">Learn more</button>
+                    <button class="btn link-btn-two">Buy</button>
+                </div>
+            </div>
+
+            <div class="box-min box-five">
+                <h1>AirPods Pro 3</h1>
+                <h5>Sound reimagined.</h5>
+                <div class="link">
+                    <button class="btn link-btn-one">Learn more</button>
+                    <button class="btn link-btn-two">Buy</button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Side promos -->
+        <div class="box-row">
+            <div class="box-min box-six">
+                <h1>MacBook Air</h1>
+                <h5>Sky blue color. <br> Sky high performance with M4.</h5>
+                <div class="link">
+                    <button class="btn link-btn-one">Learn more</button>
+                    <button class="btn link-btn-two">Buy</button>
+                </div>
+            </div>
+
+            <div class="box-min box-seven">
+                <h1>iPad Air</h1>
+                <h5> Now supercharged by the M3 chip.</h5>
+                <div class="link">
+                    <button class="btn link-btn-one">Learn more</button>
+                    <button class="btn link-btn-two">Buy</button>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Side promos -->
+        <div class="box-row">
+            <div class="box-min box-eight">
+                <h1><i class="ri-apple-fill"></i>Trade In</h1>
+                <h5>Get up to $200-$700 <br> in credit when you trade in <br> iPhone 13 or higher.¹</h5>
+                <div class="link">
+                    <button class="btn link-btn-one">Learn more</button>
+                    <button class="btn link-btn-two">Buy</button>
+                </div>
+            </div>
+
+            <div class="box-min box-nine">
+                <h1><i class="ri-apple-fill"></i>Card</h1>
+                <h5>Get up to 3% Daily Cash back <br> with every purchase.</h5>
+                <div class="link">
+                    <button class="btn link-btn-one">Learn more</button>
+                    <button class="btn link-btn-two">Buy</button>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+    </main>
+
+</body>
+
+</html>

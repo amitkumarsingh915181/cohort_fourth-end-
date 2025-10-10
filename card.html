@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="apple.ico">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <title>Apple</title>
+
+    <style>
+        @font-face {
+            font-family: 'apple-bold';
+            src: url('/sf-pro-display_bold.woff2') format('woff2');
+        }
+
+        @font-face {
+            font-family: 'apple-regular';
+            src: url('/sf-pro-display_regular.woff2') format('woff2');
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height:auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'apple-regular', sans-serif;
+            background: linear-gradient(45deg, #a4f1ff, #cefff5);
+            overflow-x: hidden;
+        }
+
+        /* Common Hero Style */
+        .container {
+            width: 90%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 50px auto;
+        }
+
+        .card-btn {
+            background: #0077ed;
+            width: 100%;
+            color: #ffffff;
+            padding: 8px;
+            border: 2px solid #ffffff;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .card-btn:hover {
+            color: #005bb5;
+            background: #ffffff;
+            border-color: #005bb5;
+        }
+
+        .card {
+            width: 300px;
+            height: 450px;
+            border-radius: 15px;
+            box-shadow: 4px 8px 20px #00000030;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: #fff;
+            padding: 10px;
+            gap: 5px;
+        }
+
+        .card .image {
+            width: 100%;
+            height: 60%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card .image img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .card .text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .card h4 {
+            font-family: 'apple-bold';
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .card p {
+            font-family: 'apple-regular';
+            text-align: center;
+            font-size: 0.8rem;
+            font-weight: 400;
+            line-height: 1.1;
+        }
+
+        .mrp-price {
+            color: #888;
+            text-decoration: line-through;
+            margin-right: 10px;
+        }
+
+        .offer-price {
+            color: #ff0400;
+            font-weight: bold;
+            margin-left: 10px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="card">
+            <div class="image">
+                <img src="https://cdn.jiostore.online/v2/jmd-asp/jdprod/wrkr/products/pictures/item/free/resize-w:450/VB8nlVq7xb-apple-iphone-17-pro-494741635-i-1-1200wx1200h.jpeg"
+                    alt="">
+            </div>
+            <div class="text">
+                <h4>iPhone 17 Pro</h4>
+                <p><span class="mrp-price">MRP: ₹1,49,999</span> <span class="offer-price">Price: ₹1,34,999</p>
+                <p>Apple iPhone 17 Pro 512 GB: 15.93 cm (6.3″) Display with Promotion up to 120Hz</p>
+                <button class="card-btn">Buy Now</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="image">
+                <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/c/n/d/-original-imah697n9dharp9z.jpeg?q=70&crop=false"
+                    alt="">
+            </div>
+            <div class="text">
+                <h4>Apple Macbook M4 Pro </h4>
+                <p><span class="mrp-price">MRP: ₹2,39,900</span> <span class="offer-price">Price: ₹2,19,990</p>
+                <p> Apple M4 Pro - (24 GB/1 TB SSD/macOS Sequoia)</p>
+                <button class="card-btn">Buy Now</button>
+            </div>
+        </div>
+
+
+        <div class="card">
+            <div class="image">
+                <img src="https://motorolain.vtexassets.com/arquivos/ids/159478-1200-auto?width=1200&height=auto&aspect=true"
+                    alt="">
+            </div>
+            <div class="text">
+                <h4>MOTOROLA Edge 60 Pro</h4>
+                <p><span class="mrp-price">MRP: ₹36,999 </span> <span class="offer-price">Price: ₹26,999</p>
+                <p>MOTOROLA Edge 60 Pro (Pantone Sparkling Grape, 256 GB)</p>
+                <button class="card-btn">Buy Now</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="image">
+                <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQJYI46WhZH8WuwRiVczx-BvbQlm69F1wYf7_SjBeHOhEkIQbx_l3V6dR2yo5h3Z3WWqle_AZvme6A8lwkNtm21JIYiW1aF"
+                    alt="">
+            </div>
+            <div class="text">
+                <h4>Galaxy S25 Ultra Titanium </h4>
+                <p><span class="mrp-price">MRP: ₹1,41,900</span> <span class="offer-price">Price: ₹1,14,990</p>
+                <p>Titanium Whitesilver, 12GB RAM, 512GB Storage</p>
+                <button class="card-btn">Buy Now</button>
+            </div>
+        </div>
+
+
+
+        <div class="card">
+            <div class="image">
+                <img src="https://cdn.jiostore.online/v2/jmd-asp/jdprod/wrkr/products/pictures/item/free/resize-w:450/g2liPceLGw-apple-iphone-16-plus-494423029-i-1-1200wx1200h.jpeg"
+                    alt="">
+            </div>
+            <div class="text">
+                <h4>iPhone 17 </h4>
+                <p><span class="mrp-price">MRP: ₹79,990</span> <span class="offer-price">Price: ₹74,990</p>
+                <p>Apple iPhone 17 Pro 256 GB:Display with Promotion up to 120Hz</p>
+                <button class="card-btn">Buy Now</button>
+            </div>
+        </div>
+
+
+        <div class="card">
+            <div class="image">
+                <img src="https://vsprod.vijaysales.com/media/catalog/product/2/3/238594_1_.jpg"
+                    alt="">
+            </div>
+            <div class="text">
+                <h4>Apple Macbook M4 Air </h4>
+                <p><span class="mrp-price">MRP: ₹99,900 </span> <span class="offer-price">Price:₹91,900</span>
+                </p>
+                <p> Apple M4 Air - (24 GB/1 TB SSD/macOS Sequoia)</p>
+                <button class="card-btn">Buy Now</button>
+            </div>
+        </div>
+
+
+
+
+        <div class="card">
+            <div class="image">
+                <img src="https://vsprod.vijaysales.com/media/catalog/product/s/2/s25_fe_white_1_.jpg"
+                    alt="">
+            </div>
+            <div class="text">
+                <h4>Samsung Galaxy S25 FE</h4>
+                <p><span class="mrp-price">MRP: ₹77,990</span> <span class="offer-price">Price: ₹65,990</span>
+                </p>
+                <p>Samsung Galaxy S25 FE 5G (8GB RAM/ 512GB Storage) Galaxy AI </p>
+                <button class="card-btn">Buy Now</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="image">
+                <img src="https://vsprod.vijaysales.com/media/catalog/product/v/i/vivox200problack_1.jpg"
+                    alt="">
+            </div>
+            <div class="text">
+                <h4>Vivo X200 Pro 5G </h4>
+                <p><span class="mrp-price">MRP: ₹1,01,990</span> <span class="offer-price">Price: ₹93,990</span>
+                </p>
+                <p> Vivo X200 Pro 5G (16GB RAM, 512GB Storage) Cosmos Black </p>
+                <button class="card-btn">Buy Now</button>
+            </div>
+        </div>
+
+
+
+    </div>
+
+</body>
+
+</html>

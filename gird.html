@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bento Grid</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      width: 100%;
+      height: auto;
+      background: #0b0b0b;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Poppins', sans-serif;
+      padding: 0.6rem 1rem;
+    }
+
+    /* Main Bento Grid */
+    main {
+      width:95%;
+      /* max-width: 1200px; */
+      height:95vh;
+      display: grid;
+      gap: 15px;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      grid-template-areas:
+        "box1 box2 box3 box3"
+        "box1 box4 box5 box6"
+        "box7 box4 box5 box8";
+    }
+
+    .child {
+      border-radius: 20px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.4s ease;
+    }
+
+    /* Overlay for better contrast */
+    .child::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4));
+      border-radius: 20px;
+      transition: 0.3s;
+    }
+
+    /* Hover effect */
+    .child:hover {
+      transform: scale(1.03);
+      filter: brightness(1.1);
+    }
+
+    /* Text overlay (optional) */
+    .child span {
+      position: absolute;
+      bottom: 15px;
+      left: 20px;
+      color: #fff;
+      font-size: 18px;
+      font-weight: 600;
+      z-index: 2;
+    }
+
+    /* Assign grid areas */
+    .child:nth-child(1) {
+      grid-area: box1;
+      background-image: url('https://i.pinimg.com/736x/7a/24/93/7a2493cedd63ac7e7b19cb63d8473afc.jpg');
+    }
+
+    .child:nth-child(2) {
+      grid-area: box2;
+      background-image: url('https://cdn.wallpapersafari.com/34/86/6Uz5Vt.jpg');
+    }
+
+    .child:nth-child(3) {
+      grid-area: box3;
+      background-image: url('https://i.pinimg.com/736x/ce/b7/3e/ceb73e29b044af544817fa875f272444.jpg');
+    }
+
+    .child:nth-child(4) {
+      grid-area: box4;
+      background-image: url('https://i.pinimg.com/736x/fe/ef/92/feef926836fbc7130733bf83f74ac26f.jpg');
+    }
+
+    .child:nth-child(5) {
+      grid-area: box5;
+      background-image: url('https://i.pinimg.com/736x/33/c4/f1/33c4f1e78d29098a2a46ff6fa4827f38.jpg');
+    }
+
+    .child:nth-child(6) {
+      grid-area: box6;
+      background-image: url('https://cdn.wallpapersafari.com/67/4/679QGM.jpg');
+    }
+
+    .child:nth-child(7) {
+      grid-area: box7;
+      background-image: url('https://cdn.wallpapersafari.com/12/9/x6PRim.jpg');
+    }
+
+    .child:nth-child(8) {
+      grid-area: box8;
+      background-image: url('https://cdn.wallpapersafari.com/22/18/vnM8bI.jpg');
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      main {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        grid-template-areas:
+          "box1 box2"
+          "box3 box3"
+          "box4 box5"
+          "box6 box7"
+          "box8 box8";
+        height: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <div class="child"><span>Box 1</span></div>
+    <div class="child"><span>Box 2</span></div>
+    <div class="child"><span>Box 3</span></div>
+    <div class="child"><span>Box 4</span></div>
+    <div class="child"><span>Box 5</span></div>
+    <div class="child"><span>Box 6</span></div>
+    <div class="child"><span>Box 7</span></div>
+    <div class="child"><span>Box 8</span></div>
+  </main>
+</body>
+</html>
