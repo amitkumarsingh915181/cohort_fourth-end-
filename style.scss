@@ -20,39 +20,75 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 8px;
+    gap: 6px;
+}
 
-    section {
-        flex-grow: 1;
-        height: 100%;
-        background-size: cover;
-        background-position: center;
-        transition: all 0.7s linear;
-        cursor: pointer;
+/* Sections */
+.main section {
+    flex-grow: 1;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: all 0.7s linear;
+    cursor: pointer;
+}
 
-        &:hover {
-            flex-grow: 2.5;
-            filter: brightness(1.1);
-        }
+/* Hover Effect */
+.main section:hover {
+    flex-grow: 2.5;
+    filter: brightness(1.1);
+}
 
-        &:nth-child(1) {
-            background-image: url('https://i.pinimg.com/736x/7a/24/93/7a2493cedd63ac7e7b19cb63d8473afc.jpg');
-        }
+/* Background Images */
+.main section:nth-child(1) {
+    background-image: url('https://i.pinimg.com/736x/7a/24/93/7a2493cedd63ac7e7b19cb63d8473afc.jpg');
+}
 
-        &:nth-child(2) {
-            background-image: url('https://i.pinimg.com/736x/66/79/d5/6679d5adf7d63b1fccbe10a7cf150478.jpg');
-        }
+.main section:nth-child(2) {
+    background-image: url('https://i.pinimg.com/736x/66/79/d5/6679d5adf7d63b1fccbe10a7cf150478.jpg');
+}
 
-        &:nth-child(3) {
-            background-image: url('https://i.pinimg.com/736x/ce/b7/3e/ceb73e29b044af544817fa875f272444.jpg');
-        }
+.main section:nth-child(3) {
+    background-image: url('https://i.pinimg.com/736x/ce/b7/3e/ceb73e29b044af544817fa875f272444.jpg');
+}
 
-        &:nth-child(4) {
-            background-image: url('https://i.pinimg.com/736x/fe/ef/92/feef926836fbc7130733bf83f74ac26f.jpg');
-        }
+.main section:nth-child(4) {
+    background-image: url('https://i.pinimg.com/736x/fe/ef/92/feef926836fbc7130733bf83f74ac26f.jpg');
+}
 
-        &:nth-child(5) {
-            background-image: url('https://i.pinimg.com/736x/33/c4/f1/33c4f1e78d29098a2a46ff6fa4827f38.jpg');
+.main section:nth-child(5) {
+    background-image: url('https://i.pinimg.com/736x/33/c4/f1/33c4f1e78d29098a2a46ff6fa4827f38.jpg');
+}
+
+
+/* ================================
+   Tablet / Small Mobile (≤ 580px)
+================================ */
+@media (max-width: 580px) {
+
+    .main {
+        gap: 2px;
+        padding: 2px;
+
+        section {
+            width: 100%;
+            // height: ;
         }
     }
+
+}
+
+/* ================================
+   Mobile (≤ 420px)
+================================ */
+@media (max-width: 420px) {
+
+    .main {
+        padding: 8px;
+
+        section {
+            height: 15vh;
+        }
+    }
+
 }
