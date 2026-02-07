@@ -4,23 +4,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Demon Slayer</title>
+    <title> Demon Slayer </title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
     <div class="main">
+        <section onmouseenter="playMusic(0)" onmouseleave="stopMusic(0)"></section>
+        <section onmouseenter="playMusic(1)" onmouseleave="stopMusic(1)"></section>
+        <section onmouseenter="playMusic(2)" onmouseleave="stopMusic(2)"></section>
+        <section onmouseenter="playMusic(3)" onmouseleave="stopMusic(3)"></section>
+        <section onmouseenter="playMusic(4)" onmouseleave="stopMusic(4)"></section>
 
-        <section></section>
-        <section></section>
-        <section></section>
-        <section></section>
-        <section></section>
-        
     </div>
 
-</body>
 
+    <!-- Songs -->
+    <audio src="audio.mp3"></audio>
+    <audio src="audio.mp3"></audio>
+    <audio src="audio.mp3"></audio>
+    <audio src="audio.mp3"></audio>
+    <audio src="audio.mp3"></audio>
+
+
+    <script>
+
+        let audios = document.querySelectorAll("audio");
+
+        function playMusic(i) {
+
+            audios.forEach(a => {
+                a.pause();
+                a.currentTime = 0;
+            });
+
+            audios[i].play();
+        }
+
+        function stopMusic(i) {
+            audios[i].pause();
+            audios[i].currentTime = 10;
+        }
+
+    </script>
+
+</body>
 
 </html>
